@@ -16,9 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path,include
+from django.contrib.auth import views as auth_views
 
 from tweet.views import Homepage
 
 urlpatterns = [
-    url(r"", Homepage.as_view(), name="homepage")
+    url(r"^$", Homepage.as_view(), name="homepage"),
+
+
 ]

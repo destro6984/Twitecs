@@ -1,8 +1,32 @@
 {% extends "tweet/base.html" %}
 {% block content %}
-    {% block description %}
-        <h2>Welcome to Twitecs</h2>
-    {% endblock %}
+    <div class="container">
+        {% block description %}
 
+        {% endblock %}
+        {% if user.is_authenticated %}
 
+            <div class="text-center"><!---form to enter tweet--->
+                <form method="post">
+                    {% csrf_token %}
+                    <label>You would write a message: </label>
+                    {{ form }}
+
+                    <input type="submit" value="Publish">
+                </form>
+            </div>
+        {% endif %}
+        {% for tweet in all_tweets %}
+            <article class="media content-section">
+                <img class="rounded-circle article-img" src="#">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2" href="#">{{ tweet.user }}</a>
+                        <small class="text-muted">{{ tweet.created|date:'d, F Y' }}</small>
+                    </div>
+                    <p class="article-content">{{ tweet.content }}</p>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
 {% endblock %}
