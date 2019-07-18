@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -6,7 +7,7 @@ from django.views import View
 
 
 
-from Users.forms import UserRegistryForm
+from users.forms import UserRegistryForm
 
 
 class Registration(View):
@@ -26,3 +27,6 @@ class Registration(View):
         return render(request, 'users/register.html', context={'form': form})
 
 
+@login_required
+def profile_user(request):
+    return render(request, 'users/profile.html')

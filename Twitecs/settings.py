@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
 
 
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,10 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'tweet',
-    'Users',
+    'tweet.apps.TweetConfig',
+
+
 ]
-AUTH_USER_MODEL = "Users.CustomUser"
+AUTH_USER_MODEL = "users.MyUser"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -130,5 +132,12 @@ USE_TZ = True
 CRISPY_TEMPLATE_PACK ="bootstrap4"
 
 LOGIN_REDIRECT_URL="homepage"
+LOGIN_URL="homepage"
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT= os.path.join(BASE_DIR, "media")
+
+MEDIA_URL= "/media/"
+
+

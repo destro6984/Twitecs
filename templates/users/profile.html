@@ -1,0 +1,19 @@
+{% extends "tweet/base.html" %}
+{% load static %}
+{% block content %}
+    {{profileuser.image.url}}
+    <div class="content-section">
+        <div class="media">
+            <img class="rounded-circle account-img" src="{{ user.profileuser.image.url}}" alt="fdsf">
+            <div class="media-body">
+                <h2 class="account-heading">{{user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+                <p class="text-secondary">{{ user.first_name }} {{ user.last_name }}</p>
+                <p class="text-secondary">{{ user.location }}</p>
+                <p class="text-secondary">{{ user.birth_date }}</p>
+            </div>
+        </div>
+        <!-- FORM HERE -->
+    </div>
+
+{% endblock %}
