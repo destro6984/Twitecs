@@ -13,21 +13,24 @@
 
 
 <body>
+<div class="container">
 {% block navbar %}
     {% include "tweet/upper_navbar.html" %}
 {% endblock %}
-        {% block description %}
-        {% endblock %}
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+{% block description %}
+{% endblock %}
+<!--django messages--->
+<div class="text-center">
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+</div>
 
 {% block content %}
-
 
 
 
@@ -46,6 +49,7 @@
 {% endblock %}
 {% block footer %}
 {% endblock %}
+</div>
 </body>
 
 </html>

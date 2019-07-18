@@ -10,7 +10,7 @@ from tweet.models import Tweet
 
 class Homepage(View):
     def get(self,request):
-        all_tweets=Tweet.objects.all()
+        all_tweets=Tweet.objects.all().order_by('-created')
         form=TweetForm()
         return render(request, 'tweet/Homepage.html',context={"all_tweets":all_tweets,
                                                               "form": form,})
@@ -19,7 +19,6 @@ class Homepage(View):
         if form.is_valid():
             tweet=form.save(commit=False)
             tweet.user =request.user
-            content=form.cleaned_data.get('content')
             tweet.save()
             messages.success(request, "Added")
             return redirect('homepage')

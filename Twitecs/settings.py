@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
     'tweet',
     'Users',
 ]
+AUTH_USER_MODEL = "Users.CustomUser"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -116,6 +119,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+
 
 
 # Static files (CSS, JavaScript, Images)

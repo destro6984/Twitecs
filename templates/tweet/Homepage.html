@@ -1,21 +1,27 @@
 {% extends "tweet/base.html" %}
+{% load crispy_forms_tags %}
 {% block content %}
     <div class="container">
         {% block description %}
 
         {% endblock %}
         {% if user.is_authenticated %}
+            <form method="post">
+                {% csrf_token %}
+                <label>You would write a message: </label>
+                <div id="div_id_content" class="form-group">
+                     <textarea name="content" cols="15" rows="5" maxlength="285"
+                                             class="textarea form-control"
+                                             required id="id_content">
+                     </textarea>
 
-            <div class="text-center"><!---form to enter tweet--->
-                <form method="post">
-                    {% csrf_token %}
-                    <label>You would write a message: </label>
-                    {{ form }}
+                </div>
 
-                    <input type="submit" value="Publish">
-                </form>
-            </div>
+                <input type="submit" value="Publish">
+            </form>
+
         {% endif %}
+    {% if all_tweets %}
         {% for tweet in all_tweets %}
             <article class="media content-section">
                 <img class="rounded-circle article-img" src="#">
@@ -28,5 +34,9 @@
                 </div>
             </article>
         {% endfor %}
+        {%else %}
+        <h1 class="text-center"> Be First Adding the Message</h1>
+
+    {% endif %}
     </div>
 {% endblock %}
