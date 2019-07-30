@@ -1,7 +1,6 @@
-from django.forms import ModelForm, Textarea, HiddenInput
+from django.forms import ModelForm, Textarea
+
 from .models import Tweet
-
-
 
 
 class TweetForm(ModelForm):

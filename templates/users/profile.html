@@ -1,19 +1,35 @@
 {% extends "tweet/base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
-    {{profileuser.image.url}}
     <div class="content-section">
-        <div class="media">
-            <img class="rounded-circle account-img" src="{{ user.profileuser.image.url}}" alt="fdsf">
-            <div class="media-body">
-                <h2 class="account-heading">{{user.username }}</h2>
-                <p class="text-secondary">{{ user.email }}</p>
-                <p class="text-secondary">{{ user.first_name }} {{ user.last_name }}</p>
-                <p class="text-secondary">{{ user.location }}</p>
-                <p class="text-secondary">{{ user.birth_date }}</p>
+        <div class="row">
+            <div class="media col">
+                <img class="rounded-circle account-img" src="{{ user.profileuser.image.url }}" alt="image">
+                <div class="media-body">
+                    <h2 class="account-heading">{{ user.username }}</h2>
+                    <p class="text-secondary">{{ user.email }}</p>
+                    <p class="text-secondary">{{ user.first_name }} {{ user.last_name }}</p>
+                    <p class="text-secondary">{{user.profileuser.location }}</p>
+                    <p class="text-secondary">{{user.profileuser.birth_date }}</p>
+                </div>
+                <div>
+                    <a class="btn btn-secondary" href="{% url 'delete' pk=user.pk %}">Delete</a>
+                </div>
             </div>
         </div>
-        <!-- FORM HERE -->
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fildset class="form-group">
+                <legend class="border-bottom mb-4"> Your Profile</legend>
+                {{ user_update_form|crispy }}
+                {{ profile_user_update_form|crispy }}
+            </fildset>
+            <div class="form-group text-center">
+                <button class="btn btn-outline-info" type="submit"> Edit</button>
+            </div>
+        </form>
+
     </div>
 
 {% endblock %}

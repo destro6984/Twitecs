@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path,include
 from django.contrib.auth import views as auth_views
 
-from tweet.views import Homepage
+from tweet.views import Homepage, TweetUpdate, TweetDelete
 
 urlpatterns = [
     url(r"^$", Homepage.as_view(), name="homepage"),
+    url(r"^update-tweet/(?P<pk>\d*)$", TweetUpdate.as_view(), name="update-tweet"),
+    url(r"^delete-tweet/(?P<pk>\d*)$", TweetDelete.as_view(), name="delete-tweet"),
 
 
 ]

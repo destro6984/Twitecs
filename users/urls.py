@@ -17,7 +17,7 @@ from django.conf.urls import url
 
 from django.contrib.auth import views as auth_views
 
-from users.views import Registration
+from users.views import Registration, DeleteUser
 from . import views
 
 
@@ -27,5 +27,9 @@ urlpatterns = [
     url(r"^logout/$", auth_views.LogoutView.as_view(template_name="users/logout.html"), name='logout'),
     url(r"^register/$", Registration.as_view(), name='register'),
     url(r"^profile/$", views.profile_user, name='profile'),
+    url(r"^delete/(?P<pk>\d*$)", DeleteUser.as_view(), name='delete'),
+    url(r"^update/(?P<pk>\d$)", views.profile_user, name='update'),
+
+
 
 ]

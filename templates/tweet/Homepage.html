@@ -6,13 +6,13 @@
 
         {% endblock %}
         {% if user.is_authenticated %}
-            <form method="post">
+            <form method="post"><!-- form to add tweet -->
                 {% csrf_token %}
                 <label>You would write a message: </label>
                 <div id="div_id_content" class="form-group">
                      <textarea name="content" cols="15" rows="5" maxlength="285"
-                                             class="textarea form-control"
-                                             required id="id_content">
+                               class="textarea form-control"
+                               required id="id_content">
                      </textarea>
 
                 </div>
@@ -21,22 +21,30 @@
             </form>
 
         {% endif %}
-    {% if all_tweets %}
-        {% for tweet in all_tweets %}
-            <article class="media content-section border rounded ">
-                <img class="rounded-circle article-img" src="#">
-                <div class="media-body">
-                    <div class="article-metadata">
-                        <a class="mr-2" href="#">{{ tweet.user }}</a>
-                        <small class="text-muted">{{ tweet.created|date:'d, F Y' }}</small>
-                    </div>
-                    <p class="article-content">{{ tweet.content }}</p>
+        {% if all_tweets %}<!-- list of all tweets -->
+            <div class="row">
+                <div class="col">
+                    {% for tweet in all_tweets %}
+                        <article class="media content-section border rounded ">
+                            <img class="rounded-circle article-img" src="{{ tweet.user.profileuser.image.url }}"
+                                 alt="image">
+                            <div class="media-body">
+                                <div class="article-metadata">
+                                    <a class="mr-2" href="#">{{ tweet.user }}</a>
+                                    <small class="text-muted">{{ tweet.created|date:'d, F Y' }}</small>
+                                </div>
+                                <p class="article-content d-inline-block" style="max-width: 700px; word-wrap: break-word">{{ tweet.content }}</p>
+                            </div>
+                            <div class="col text-right">
+                                <a class="btn btn-secondary" href="{% url 'update-tweet' pk=tweet.id %}">Update</a>
+                                <a class="btn btn-secondary" href="{% url 'delete-tweet' pk=tweet.id %}">Delete</a>
+                            </div>
+                        </article>
+                    {% endfor %}
+                    {% else %}
+                    <h1 class="text-center"> Be First Adding the Message</h1>
                 </div>
-            </article>
-        {% endfor %}
-        {%else %}
-        <h1 class="text-center"> Be First Adding the Message</h1>
-
-    {% endif %}
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
