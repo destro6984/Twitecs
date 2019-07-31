@@ -14,16 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.contrib import admin
-from django.urls import path,include
-from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
 
-from tweet.views import Homepage, TweetUpdate, TweetDelete
+from tweet.views import Homepage, TweetUpdate, TweetDelete, UserTweetListView, TweetDetailView
 
 urlpatterns = [
     url(r"^$", Homepage.as_view(), name="homepage"),
     url(r"^update-tweet/(?P<pk>\d*)$", TweetUpdate.as_view(), name="update-tweet"),
     url(r"^delete-tweet/(?P<pk>\d*)$", TweetDelete.as_view(), name="delete-tweet"),
-
+    url(r"^users-tweet/(?P<username>\w+)$", UserTweetListView.as_view(), name="users-tweet"),
+    url(r"^tweet/(?P<pk>\d*)$", TweetDetailView.as_view(), name="detail-tweet"),
 
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
