@@ -1,0 +1,25 @@
+{% extends "tweet/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        {% for tweet in tweets %}
+
+            <article class="media content-section">
+                <img class="rounded-circle article-img" src="{{ tweet.user.profileuser.image.url }}">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2" href="3">{{ tweet.user }}</a>
+                        <small class="text-muted">{{ tweet.created|date:'d, F Y' }}</small>
+                    </div>
+                    <p class="article-content">{{ tweet.content }}</p>
+                </div>
+            </article>
+        {% endfor %}
+
+    </div>
+
+{% endblock content %}
+
+
