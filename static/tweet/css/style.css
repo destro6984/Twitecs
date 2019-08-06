@@ -18,7 +18,6 @@ body {
 
 	width: 500px;
 	background-color: white;
-
 	padding: 20px;
 	position: relative;
 	border-radius: 4px;
@@ -36,4 +35,12 @@ body {
 	&:hover {
 		color: #666;
 	}
+}
+/*end */
+
+
+.rounded-circle {
+    width: 130px;
+	height: 100%;
+
 }

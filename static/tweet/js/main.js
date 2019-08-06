@@ -28,7 +28,7 @@ $(function () {
             dataType: 'json',
         });
     });
-
+// open popup window to add new message
 $('#newtweet').click(function(e) {
 	$('.bg-modal').css('display', 'flex')
 });

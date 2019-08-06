@@ -116,7 +116,6 @@ class TweetDetailView(FormMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context['tweet'] = Tweet.objects.get(id=self.object.id)
         context['comments'] = Comments.objects.filter(tweet_id=self.object.id).order_by('-created_comment')
         return context
 
