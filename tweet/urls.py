@@ -17,14 +17,18 @@ from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
 
-from tweet.views import Homepage, TweetUpdate, TweetDelete, UserTweetListView, TweetDetailView
+from tweet.views import Homepage, TweetUpdate, TweetDelete, UserTweetListView, TweetDetailView, MessagesView, \
+    MessageDetail, change_status_to_read
 
 urlpatterns = [
     url(r"^$", Homepage.as_view(), name="homepage"),
     url(r"^update-tweet/(?P<pk>\d*)$", TweetUpdate.as_view(), name="update-tweet"),
     url(r"^delete-tweet/(?P<pk>\d*)$", TweetDelete.as_view(), name="delete-tweet"),
-    url(r"^users-tweet/(?P<username>\w+)$", UserTweetListView.as_view(), name="users-tweet"),
-    url(r"^tweet/(?P<pk>\d*)$", TweetDetailView.as_view(), name="detail-tweet"),
+    url(r"^users-tweet/(?P<username>\w+)/(?P<pk>\d*)$", UserTweetListView.as_view(), name="users-tweet"),
+    url(r"^detail-tweet/(?P<username>\w+)/(?P<pk>\d*)$", TweetDetailView.as_view(), name="detail-tweet"),
+    url(r"^users-messages/(?P<pk>\d*)$", MessagesView.as_view(), name="users-messages"),
+    url(r"^message/(?P<pk>\d*)$", MessageDetail.as_view(), name="message"),
+    url(r'^ajax/change_status/(?P<pk>\d*)$', change_status_to_read, name='ajax_change_status')
 
 ]
 if settings.DEBUG:

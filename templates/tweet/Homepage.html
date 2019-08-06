@@ -12,8 +12,7 @@
                 <div id="div_id_content" class="form-group">
                      <textarea name="content" cols="15" rows="5" maxlength="285"
                                class="textarea form-control"
-                               required id="id_content">
-                     </textarea>
+                               required id="id_content"></textarea>
 
                 </div>
 
@@ -25,52 +24,24 @@
             <div class="row">
                 <div class="col">
                     {% for tweet in all_tweets %}
-
-                            <article class="media content-section border rounded tweetlist" >
-
-
-                                <img class="rounded-circle article-img" src="{{ tweet.user.profileuser.image.url }}"
-                                     alt="image">
-                                <div class="media-body">
-                                    <div class="article-metadata">
-                                        <a class="mr-2"
-                                           href="{% url "users-tweet" username=tweet.user %}">{{ tweet.user }}</a>
-                                        <small class="text-muted">{{ tweet.created|date:'d, F Y' }}</small>
-                                    </div>
-                                    <p class="article-content d-inline-block"
-                                       style="max-width: 700px; word-wrap: break-word">{{ tweet.content }}</p>
+                        <article class="media content-section border rounded mt-2 tweetlist">
+                            <img class="rounded-circle article-img" src="{{ tweet.user.profileuser.image.url }}"
+                                 alt="image">
+                            <div class="media-body">
+                                <div class="article-metadata">
+                                    <a class="mr-2"
+                                       href="{% url "users-tweet" username=tweet.user pk=tweet.user.id %}">{{ tweet.user }}</a>
+                                    <small class="text-muted">{{ tweet.created|date:'d, F Y, H:i' }}</small>
                                 </div>
-                                <div class="col text-right">
-                                    <a class="btn btn-secondary" href="{% url 'update-tweet' pk=tweet.id %}">Update</a>
-                                    <a class="btn btn-secondary" href="{% url 'delete-tweet' pk=tweet.id %}">Delete</a>
-                                    <a id="tweetdetial" class="btn btn-secondary d-none " href="{% url 'detail-tweet' pk=tweet.id %}">Detail</a>
-                                </div>
-
-                            </article>
-
-                        <article class="media content-section border rounded">
-                            <div>
-                                {% for coms in all_comments %}
-                                    <img class="rounded-circle article-img" src="{{ tweet.user.profileuser.image.url }}"
-                                         alt="image">
-                                    <div class="media-body">
-                                        <div class="article-metadata">
-                                            <a class="mr-2" href="#">{{ coms.author }}</a>
-                                            <small class="text-muted">{{ coms.created_comment|date:'d, F Y' }}</small>
-                                        </div>
-                                        <p class="article-content d-inline-block"
-                                           style="max-width: 700px; word-wrap: break-word">{{ coms.content }}</p>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a class="btn btn-secondary"
-                                           href="{% url 'update-tweet' pk=coms.id %}">Update</a>
-                                        <a class="btn btn-secondary"
-                                           href="{% url 'delete-tweet' pk=coms.id %}">Delete</a>
-                                    </div>
-
-                                    </div>
-                                {% endfor %}
+                                <p class="article-content"
+                                   style="max-width: 700px; word-wrap: break-word">{{ tweet.content }}</p>
+                            </div>
+                            <div class="text-right">
+                                <a id="tweetdetial" class="btn btn-secondary d-none "
+                                   href="{% url 'detail-tweet' username=tweet.user pk=tweet.id %}">Detail</a>
+                            </div>
                         </article>
+                        <div class="col">Comments:{{ tweet.comments_set.count }}</div>
 
                     {% endfor %}
                     {% else %}

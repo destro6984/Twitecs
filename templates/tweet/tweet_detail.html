@@ -4,26 +4,53 @@
 {% block content %}
 
     <div class="container">
-        <article class="media content-section border rounded tweetlist">
-            <img class="rounded-circle article-img" src="{{ object.user.profileuser.image.url }}"
+    <article class="media content-section border rounded ">
+        <img class="rounded-circle article-img" src="{{ object.user.profileuser.image.url }}"
+             alt="image">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2"
+                   href="{% url "users-tweet" username=tweet.user pk=tweet.user.id %}">{{ tweet.user }}</a>
+                <small class="text-muted">{{ tweet.created|date:'d, F Y' }}</small>
+            </div>
+            <p class="article-content"
+               style="max-width: 700px; word-wrap: break-word">{{ tweet.content }}</p>
+        </div>
+        <div class="col text-right">
+            {% if tweet.user == request.user %}
+                <a class="btn btn-secondary" href="{% url 'update-tweet' pk=object.id %}">Update</a>
+                <a class="btn btn-secondary" href="{% url 'delete-tweet' pk=object.id %}">Delete</a>
+            {% endif %}
+        </div>
+    </article>
+    {% if user.is_authenticated %}
+
+        <form method="post"><!-- form to add comment -->
+            {% csrf_token %}
+            <label>You would write a comment: </label>
+            <tr>
+                <td><textarea name="text_content" class="rounded" cols="40" rows="3" maxlength="60" required id="id_text_content"></textarea></td>
+            </tr>
+            <input type="submit" value="Comment">
+        </form>
+    {% endif %}
+
+    {% for coment in comments %}
+        <article class="media content-section border rounded ml-5 mr-2 mt-2">
+            <img class="rounded-circle " src="{{ coment.author.profileuser.image.url }}"
                  alt="image">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2"
-                       href="{% url "users-tweet" username=tweet.user %}">{{ tweet.user }}</a>
-                    <small class="text-muted">{{ tweet.created|date:'d, F Y' }}</small>
+                    <a class="mr-2" href="#">{{ coment.author }}</a>
+                    <small class="text-muted">{{ coment.created_comment|date:'d, F Y' }}</small>
                 </div>
-                <p class="article-content d-inline-block"
-                   style="max-width: 700px; word-wrap: break-word">{{ tweet.content }}</p>
-            </div>
-            <div class="col text-right">
-                <a class="btn btn-secondary" href="{% url 'update-tweet' pk=object.id %}">Update</a>
-                <a class="btn btn-secondary" href="{% url 'delete-tweet' pk=object.id %}">Delete</a>
+                <p class="article-content"
+                   style="max-width: 700px; word-wrap: break-word">{{ coment.text_content }}</p>
             </div>
 
         </article>
 
-    </div>
+    {% endfor %}
 
 {% endblock content %}
 

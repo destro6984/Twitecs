@@ -1,0 +1,50 @@
+{% extends "tweet/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <h1 class="text-center">Inbox</h1>
+        <div class="row">
+            <div class="col text-center">
+                <p>New</p>
+            </div>
+            <div class="col text-center">
+                <p>Read</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6" id="new">
+                {% for messages in object_list %}
+                    <ul>
+                        <li style="list-style: none">
+                            <article class="media content-section border rounded">
+                                <div class="media-body">
+                                    <div class="article-metadata">
+                                        <a class="mr-2" href="#">{{ messages.from_user }}</a>
+                                        <small class="text-muted">{{ messages.send_time|date:'d, F Y, H:i' }}</small>
+                                    </div>
+                                    <p class="article-content"
+                                       style=" display:inline; max-width: 700px; word-wrap: break-word">{{ messages.message }}</p>
+                                    <form method="GET">
+                                        {% csrf_token %}
+                                        <input type="submit" class="btn showmessage" value="Read"
+                                               name="{% url 'message' pk=messages.id %}" id={{ messages.id }} />
+                                    </form>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                {% endfor %}
+
+            </div>
+             <div class="col-6" id="read">
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+

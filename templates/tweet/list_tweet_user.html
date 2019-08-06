@@ -2,11 +2,22 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-
     <div class="container">
+        {% if user.is_authenticated %}
+
+            <form method="post"><!-- form to add message -->
+                {% csrf_token %}
+                <label>You would write a message to : </label>
+                <tr>
+                    <td><textarea name="message" cols="40" rows="2" maxlength="556" required id="id_message"></textarea>
+                    </td>
+                </tr>
+                <input type="submit" value="Send">
+            </form>
+        {% endif %}
         {% for tweet in tweets %}
 
-            <article class="media content-section">
+            <article class="media content-section border rounded tweetlist">
                 <img class="rounded-circle article-img" src="{{ tweet.user.profileuser.image.url }}">
                 <div class="media-body">
                     <div class="article-metadata">
@@ -15,10 +26,19 @@
                     </div>
                     <p class="article-content">{{ tweet.content }}</p>
                 </div>
+                {% if tweet.user == request.user %}
+                    <a class="btn btn-secondary" href="{% url 'update-tweet' pk=tweet.id %}">Update</a>
+                    <a class="btn btn-secondary" href="{% url 'delete-tweet' pk=tweet.id %}">Delete</a>
+                {% endif %}
+             <a id="tweetdetial" class="btn btn-secondary d-none"
+               href="{% url 'detail-tweet' username=tweet.user pk=tweet.id %}">Detail</a>
             </article>
+            <p>Number of comments:{{ tweet.comments_set.count }}</p>
+
         {% endfor %}
 
     </div>
+
 
 {% endblock content %}
 

@@ -1,14 +1,18 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+import json
+from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 
 # Create your views here.
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views import View
-from django.views.generic import UpdateView, DeleteView, CreateView, ListView, DetailView
+from django.views.generic import UpdateView, DeleteView, ListView, DetailView
+from django.views.generic.edit import FormMixin
 
-from tweet.forms import TweetForm
-from tweet.models import Tweet, Comments
+from tweet.forms import TweetForm, CommAddForm, MessageForm
+from tweet.models import Tweet, Comments, Messages
 from users.models import MyUser
 
 
@@ -54,26 +58,95 @@ class TweetDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return self.request.user == self.get_object().user
 
 
-class CommentCreate(CreateView):
-    model = Comments
 
-
-class UserTweetListView(ListView):
+class UserTweetListView(FormMixin,ListView):
     model = Tweet
     context_object_name = "tweets"
     template_name = 'tweet/list_tweet_user.html'
+    form_class = MessageForm
+
+    def get_success_url(self):
+        return reverse('users-tweet', kwargs={'username': self.kwargs.get('username'),"pk":self.kwargs.get('pk')})
 
     def get_queryset(self):
         user = get_object_or_404(MyUser, username=self.kwargs.get('username'))
         return Tweet.objects.filter(user=user)
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        if form.is_valid():
+            form_send_message = form.save(commit=False)
+            form_send_message.from_user_id = request.user.id
+            form_send_message.to_user_id = self.kwargs.get('pk')
+            form_send_message.save()
+            messages.success(request, "Send")
+            return self.form_valid(form)
+        else:
+            messages.success(request, "Error")
+            return self.form_invalid(form)
 
-class TweetDetailView(DetailView):
-    model=Tweet
+class TweetDetailView(FormMixin, DetailView):
+    model = Tweet
     template_name = 'tweet/tweet_detail.html'
+    form_class = CommAddForm
+
+    def get_success_url(self):
+        return reverse('detail-tweet', kwargs={'username': self.object.user,
+                                               'pk': self.object.pk})
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        form = self.get_form()
+
+        if form.is_valid():
+            form_add_com = form.save(commit=False)
+            form_add_com.tweet_id = self.get_object().id
+            form_add_com.author_id = request.user.id
+
+            form_add_com.save()
+            messages.success(request, "Commented")
+            return self.form_valid(form)
+        else:
+            messages.success(request, "Error")
+            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        # Here, we would record the user's interest using the message
+        # passed in form.cleaned_data['message']
+        return super().form_valid(form)
 
     def get_context_data(self, **kwargs):
-        print(self.object.id)
         context = super().get_context_data(**kwargs)
-        context['tweet'] = Tweet.objects.get(id=self.object.id)
+        # context['tweet'] = Tweet.objects.get(id=self.object.id)
+        context['comments'] = Comments.objects.filter(tweet_id=self.object.id).order_by('-created_comment')
         return context
 
+
+class MessagesView(LoginRequiredMixin,UserPassesTestMixin,ListView):
+    model= Messages
+    field='__all__'
+    template_name = "tweet/list_messages.html"
+
+    def get_queryset(self):
+        user = get_object_or_404(MyUser, id=self.kwargs.get('pk'))
+        return Messages.objects.filter(to_user=user)
+    def test_func(self):
+        user = get_object_or_404(MyUser, id=self.kwargs.get('pk'))
+        return self.request.user == user
+
+
+class MessageDetail(View):
+    def get(self,request,pk):
+        mess=Messages.objects.get(id=pk)
+        return render(request,'tweet/message_detail.html',context={"mess":mess})
+
+
+def change_status_to_read(request,pk):
+    pk= request.GET.get("pk")
+    is_read = json.loads(request.GET.get('is_read', False))
+    message_to_change = Messages.objects.get(id=pk)
+    try:
+        message_to_change.is_read = is_read
+        message_to_change.save()
+        return JsonResponse({"success": True})
+    except Exception as e:
+        return JsonResponse({"success": False})
