@@ -1,0 +1,21 @@
+{% extends "tweet/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <div class="container">
+    <article class="media content-section border rounded ">
+        <img class="rounded-circle article-img" src="{{ mess.from_user.profileuser.image.url}}"
+             alt="image">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2"
+                   href="{% url "users-tweet" username=mess.from_user.username pk=mess.from_user.id %}">{{ mess.from_user }}</a>
+                <small class="text-muted">{{ mess.send_time|date:'d, F Y' }}</small>
+            </div>
+            <p class="article-content"
+               style="max-width: 700px; word-wrap: break-word">{{ mess.message }}</p>
+        </div>
+    </article>
+{% endblock content %}
+
+
