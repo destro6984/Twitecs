@@ -1,6 +1,6 @@
 $(function () {
 
-
+// clicko on tweet -redirect to tweet deatil
     $(".tweetlist").click(function () {
         var url = $(this).find('#tweetdetial').attr('href');
         console.log(url);
@@ -8,14 +8,14 @@ $(function () {
 
     });
 
-
+// open unread message to new window ,change message to is_read-TRUE
     $(".showmessage").click(function (e) {
         e.preventDefault();
         var url = $(this).attr('name');
-        window.open(url, "myWindow", 'width=400,height=200');
+        window.open(url, "", 'width=700,height=200');
 
 
-        var url_to_change_isread = '/ajax/change_status/';
+        var url_to_change_isread = '/change_status/';
         pk=$(this).attr('id');
         $.ajax({
             type: "GET",
@@ -26,55 +26,16 @@ $(function () {
                 'pk': pk,
             },
             dataType: 'json',
-            success: function (data) {
-                if (data.success) {
-                    alert("ajax call success.");
-                } else {
-                    alert("ajax call not success.");
-                }
-            }
         });
     });
 
-//
-//     $('.showmessage').click(function (event) {
-//         $('.bg-modal').css('display','flex');
-//         // $('.bg-modal').css('display','flex');
-//
-//     });
-//
-//
-//     $('.close').click(function (event) {
-//         $('.bg-modal').css('display','none');
-//     });
+$('#newtweet').click(function(e) {
+	$('.bg-modal').css('display', 'flex')
+});
 
+$('.close').click( function() {
+	$('.bg-modal').css('display','none')
+});
 
-    // $("#button_id").on('click', function () {
-    //     var username = $(this).val();
-    //     var active =
-    // <
-    //     true > // or false, you have to set it
-    //     var active =
-    // <
-    //     id > // you have to set it
-    //     $.ajax({
-    //         url: '/ajax/validate_username/',
-    //         data: {
-    //             'csrfmiddlewaretoken': $('input[name="csrfmiddlewaretoken"]').val(),
-    //             'active': active
-    //             'job_id': username
-    //         },
-    //         dataType: 'json',
-    //         success: function (data) {
-    //             if (data.success) {
-    //                 alert("ajax call success.");
-    //                 // here you update the HTML to change the active to innactive
-    //             } else {
-    //                 alert("ajax call not success.");
-    //             }
-    //         }
-    //     });
-    //
-    // });
 
 });

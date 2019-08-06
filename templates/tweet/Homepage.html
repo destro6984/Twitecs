@@ -6,9 +6,12 @@
 
         {% endblock %}
         {% if user.is_authenticated %}
+
+
+
             <form method="post"><!-- form to add tweet -->
                 {% csrf_token %}
-                <label>You would write a message: </label>
+                <label>You would write a tweet: </label>
                 <div id="div_id_content" class="form-group">
                      <textarea name="content" cols="15" rows="5" maxlength="285"
                                class="textarea form-control"
@@ -50,4 +53,5 @@
             </div>
         {% endif %}
     </div>
+
 {% endblock %}

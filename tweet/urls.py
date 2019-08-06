@@ -28,7 +28,7 @@ urlpatterns = [
     url(r"^detail-tweet/(?P<username>\w+)/(?P<pk>\d*)$", TweetDetailView.as_view(), name="detail-tweet"),
     url(r"^users-messages/(?P<pk>\d*)$", MessagesView.as_view(), name="users-messages"),
     url(r"^message/(?P<pk>\d*)$", MessageDetail.as_view(), name="message"),
-    url(r'^ajax/change_status/(?P<pk>\d*)$', change_status_to_read, name='ajax_change_status')
+    url(r'^change_status/(?P<pk>\d*)$', change_status_to_read, name='ajax_change_status')
 
 ]
 if settings.DEBUG:
