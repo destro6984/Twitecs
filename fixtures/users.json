@@ -1,422 +1,18 @@
 [
 {
-    "model": "contenttypes.contenttype",
-    "pk": 1,
-    "fields": {
-        "app_label": "admin",
-        "model": "logentry"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 2,
-    "fields": {
-        "app_label": "auth",
-        "model": "permission"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 3,
-    "fields": {
-        "app_label": "auth",
-        "model": "group"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 4,
-    "fields": {
-        "app_label": "contenttypes",
-        "model": "contenttype"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": {
-        "app_label": "sessions",
-        "model": "session"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 6,
-    "fields": {
-        "app_label": "tweet",
-        "model": "comments"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 7,
-    "fields": {
-        "app_label": "tweet",
-        "model": "tweet"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 8,
-    "fields": {
-        "app_label": "users",
-        "model": "myuser"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "pk": 9,
-    "fields": {
-        "app_label": "users",
-        "model": "profileuser"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "edfc8ezjkd9f98a3zl4pn70k5dr2q62b",
-    "fields": {
-        "session_data": "NzU1ZWZlMTIxM2NjMGViMDczZjk5NzIxZjA1Mjk0ZjdkYzkzNzZmZDp7Il9hdXRoX3VzZXJfaWQiOiI2IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiODY1NWExZWNhMWY5MzJkNjFhYmQ5MWZiNGNmMDM3ZWZjYWFiMTY4In0=",
-        "expire_date": "2019-08-14T10:58:28.714Z"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 1,
-    "fields": {
-        "name": "Can add log entry",
-        "content_type": 1,
-        "codename": "add_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 2,
-    "fields": {
-        "name": "Can change log entry",
-        "content_type": 1,
-        "codename": "change_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 3,
-    "fields": {
-        "name": "Can delete log entry",
-        "content_type": 1,
-        "codename": "delete_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 4,
-    "fields": {
-        "name": "Can view log entry",
-        "content_type": 1,
-        "codename": "view_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 5,
-    "fields": {
-        "name": "Can add permission",
-        "content_type": 2,
-        "codename": "add_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 6,
-    "fields": {
-        "name": "Can change permission",
-        "content_type": 2,
-        "codename": "change_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 7,
-    "fields": {
-        "name": "Can delete permission",
-        "content_type": 2,
-        "codename": "delete_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 8,
-    "fields": {
-        "name": "Can view permission",
-        "content_type": 2,
-        "codename": "view_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 9,
-    "fields": {
-        "name": "Can add group",
-        "content_type": 3,
-        "codename": "add_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 10,
-    "fields": {
-        "name": "Can change group",
-        "content_type": 3,
-        "codename": "change_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 11,
-    "fields": {
-        "name": "Can delete group",
-        "content_type": 3,
-        "codename": "delete_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 12,
-    "fields": {
-        "name": "Can view group",
-        "content_type": 3,
-        "codename": "view_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 13,
-    "fields": {
-        "name": "Can add content type",
-        "content_type": 4,
-        "codename": "add_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 14,
-    "fields": {
-        "name": "Can change content type",
-        "content_type": 4,
-        "codename": "change_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 15,
-    "fields": {
-        "name": "Can delete content type",
-        "content_type": 4,
-        "codename": "delete_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 16,
-    "fields": {
-        "name": "Can view content type",
-        "content_type": 4,
-        "codename": "view_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 17,
-    "fields": {
-        "name": "Can add session",
-        "content_type": 5,
-        "codename": "add_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 18,
-    "fields": {
-        "name": "Can change session",
-        "content_type": 5,
-        "codename": "change_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 19,
-    "fields": {
-        "name": "Can delete session",
-        "content_type": 5,
-        "codename": "delete_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 20,
-    "fields": {
-        "name": "Can view session",
-        "content_type": 5,
-        "codename": "view_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 21,
-    "fields": {
-        "name": "Can add comments",
-        "content_type": 6,
-        "codename": "add_comments"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 22,
-    "fields": {
-        "name": "Can change comments",
-        "content_type": 6,
-        "codename": "change_comments"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 23,
-    "fields": {
-        "name": "Can delete comments",
-        "content_type": 6,
-        "codename": "delete_comments"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 24,
-    "fields": {
-        "name": "Can view comments",
-        "content_type": 6,
-        "codename": "view_comments"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 25,
-    "fields": {
-        "name": "Can add tweet",
-        "content_type": 7,
-        "codename": "add_tweet"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 26,
-    "fields": {
-        "name": "Can change tweet",
-        "content_type": 7,
-        "codename": "change_tweet"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 27,
-    "fields": {
-        "name": "Can delete tweet",
-        "content_type": 7,
-        "codename": "delete_tweet"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 28,
-    "fields": {
-        "name": "Can view tweet",
-        "content_type": 7,
-        "codename": "view_tweet"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 29,
-    "fields": {
-        "name": "Can add user",
-        "content_type": 8,
-        "codename": "add_myuser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 30,
-    "fields": {
-        "name": "Can change user",
-        "content_type": 8,
-        "codename": "change_myuser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 31,
-    "fields": {
-        "name": "Can delete user",
-        "content_type": 8,
-        "codename": "delete_myuser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 32,
-    "fields": {
-        "name": "Can view user",
-        "content_type": 8,
-        "codename": "view_myuser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 33,
-    "fields": {
-        "name": "Can add profile user",
-        "content_type": 9,
-        "codename": "add_profileuser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 34,
-    "fields": {
-        "name": "Can change profile user",
-        "content_type": 9,
-        "codename": "change_profileuser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 35,
-    "fields": {
-        "name": "Can delete profile user",
-        "content_type": 9,
-        "codename": "delete_profileuser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 36,
-    "fields": {
-        "name": "Can view profile user",
-        "content_type": 9,
-        "codename": "view_profileuser"
-    }
-},
-{
     "model": "users.myuser",
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
         "last_login": null,
         "is_superuser": false,
-        "username": "kimberly71",
-        "first_name": "Catherine",
-        "last_name": "George",
+        "username": "emily81",
+        "first_name": "Sara",
+        "last_name": "Whitaker",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2019-07-30T16:13:29.779Z",
-        "email": "melissa47@yahoo.com",
+        "date_joined": "2019-08-01T13:36:45.568Z",
+        "email": "bherrera@hotmail.com",
         "groups": [],
         "user_permissions": []
     }
@@ -428,13 +24,13 @@
         "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
         "last_login": null,
         "is_superuser": false,
-        "username": "gonzalezmartin",
-        "first_name": "Robert",
-        "last_name": "Lawson",
+        "username": "jenniferhodge",
+        "first_name": "Joseph",
+        "last_name": "Hinton",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2019-07-30T16:14:34.269Z",
-        "email": "kingjennifer@green-alexander.org",
+        "date_joined": "2019-08-01T13:36:45.824Z",
+        "email": "andersonsusan@ellison-hughes.com",
         "groups": [],
         "user_permissions": []
     }
@@ -444,105 +40,105 @@
     "pk": 3,
     "fields": {
         "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": "2019-07-30T16:28:52.947Z",
+        "last_login": null,
         "is_superuser": false,
-        "username": "tyler25",
+        "username": "fharrison",
+        "first_name": "Jamie",
+        "last_name": "Bowman",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-08-01T13:36:46.065Z",
+        "email": "davidrios@collins.info",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aliciacoffey",
+        "first_name": "Matthew",
+        "last_name": "Hamilton",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-08-01T13:36:46.282Z",
+        "email": "lisa39@gmail.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "oconnoramy",
+        "first_name": "Jason",
+        "last_name": "Stephenson",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-08-01T13:36:46.498Z",
+        "email": "kgarrett@gmail.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
+        "last_login": "2019-08-06T12:38:10.599Z",
+        "is_superuser": false,
+        "username": "simmonsleonard",
+        "first_name": "Kyle",
+        "last_name": "Garrison",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-08-01T13:36:46.706Z",
+        "email": "jessica23@hotmail.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jrice",
+        "first_name": "Mary",
+        "last_name": "Gibbs",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-08-01T13:36:46.906Z",
+        "email": "carla15@watkins.biz",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
+        "last_login": "2019-08-12T17:07:31.810Z",
+        "is_superuser": false,
+        "username": "caitlyndavis",
         "first_name": "Donald",
-        "last_name": "Larson",
+        "last_name": "Russell",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2019-07-30T16:15:19.190Z",
-        "email": "jessica65@hobbs-patterson.com",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "users.myuser",
-    "pk": 4,
-    "fields": {
-        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "wmcneil",
-        "first_name": "Michelle",
-        "last_name": "Peters",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2019-07-30T16:16:36.111Z",
-        "email": "deborahwebb@wallace-moran.com",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "users.myuser",
-    "pk": 5,
-    "fields": {
-        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "jenniferlee",
-        "first_name": "Timothy",
-        "last_name": "Smith",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2019-07-30T16:16:36.405Z",
-        "email": "alexanderlopez@crawford.com",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "users.myuser",
-    "pk": 6,
-    "fields": {
-        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": "2019-07-31T10:58:28.529Z",
-        "is_superuser": false,
-        "username": "downsmelanie",
-        "first_name": "Mark",
-        "last_name": "Lopez",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2019-07-30T16:16:36.637Z",
-        "email": "marshallrussell@yahoo.com",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "users.myuser",
-    "pk": 7,
-    "fields": {
-        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "cory72",
-        "first_name": "Rachel",
-        "last_name": "Simmons",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2019-07-30T16:16:36.903Z",
-        "email": "william11@gmail.com",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "users.myuser",
-    "pk": 8,
-    "fields": {
-        "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": null,
-        "is_superuser": false,
-        "username": "ashley95",
-        "first_name": "Michelle",
-        "last_name": "Brown",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2019-07-30T16:16:37.156Z",
-        "email": "xadams@martinez.info",
+        "date_joined": "2019-08-01T13:36:47.132Z",
+        "email": "toddjoseph@gmail.com",
         "groups": [],
         "user_permissions": []
     }
@@ -552,15 +148,15 @@
     "pk": 9,
     "fields": {
         "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": null,
+        "last_login": "2019-08-12T16:57:30.860Z",
         "is_superuser": false,
-        "username": "lauren40",
-        "first_name": "Steven",
-        "last_name": "Castro",
+        "username": "hornmichael",
+        "first_name": "Alec",
+        "last_name": "Hanna",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2019-07-30T16:16:37.387Z",
-        "email": "matthewhahn@gmail.com",
+        "date_joined": "2019-08-01T13:36:47.357Z",
+        "email": "marioobrien@charles.com",
         "groups": [],
         "user_permissions": []
     }
@@ -570,15 +166,15 @@
     "pk": 10,
     "fields": {
         "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": null,
+        "last_login": "2019-08-05T16:53:04.011Z",
         "is_superuser": false,
-        "username": "tmurphy",
-        "first_name": "Ana",
-        "last_name": "Taylor",
+        "username": "william03",
+        "first_name": "Bradley",
+        "last_name": "Thompson",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2019-07-30T16:16:37.621Z",
-        "email": "rodriguezgerald@harper-carter.com",
+        "date_joined": "2019-08-01T13:36:47.590Z",
+        "email": "steven82@jones-haynes.com",
         "groups": [],
         "user_permissions": []
     }
@@ -590,323 +186,69 @@
         "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
         "last_login": null,
         "is_superuser": false,
-        "username": "szimmerman",
-        "first_name": "Michael",
-        "last_name": "Arnold",
+        "username": "khayes",
+        "first_name": "Jonathan",
+        "last_name": "Brady",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2019-07-30T16:16:37.853Z",
-        "email": "charlesdavis@dennis-bell.biz",
+        "date_joined": "2019-08-01T13:36:47.823Z",
+        "email": "saramiller@hotmail.com",
         "groups": [],
         "user_permissions": []
     }
 },
 {
-    "model": "users.profileuser",
-    "pk": 1,
-    "fields": {
-        "user": 1,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 2,
-    "fields": {
-        "user": 2,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 3,
-    "fields": {
-        "user": 3,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 4,
-    "fields": {
-        "user": 4,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 5,
-    "fields": {
-        "user": 5,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 6,
-    "fields": {
-        "user": 6,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 7,
-    "fields": {
-        "user": 7,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 8,
-    "fields": {
-        "user": 8,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 9,
-    "fields": {
-        "user": 9,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 10,
-    "fields": {
-        "user": 10,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 11,
-    "fields": {
-        "user": 11,
-        "image": "default.jpg",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 1,
-    "fields": {
-        "content": "['Growth power act meet family.', 'Grow person bank future most future.', 'Surface beyond list traditional political sure recognize space.']",
-        "created": "2019-07-30T16:18:44.138Z",
-        "user": 1
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 2,
-    "fields": {
-        "content": "['Stock first leg improve probably inside degree.', 'Book receive church goal manage.', 'Already page who imagine.']",
-        "created": "2019-07-30T16:18:44.200Z",
-        "user": 2
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 3,
-    "fields": {
-        "content": "['Term discover bit.',xcvx 'Say consider business dinner.', 'Know especially risk particularly.']",
-        "created": "2019-07-30T16:18:44.283Z",
-        "user": 3
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 4,
-    "fields": {
-        "content": "['Kid culture window price more together.', 'First everyone security might may yard store under.', 'Quite friend often mind trip.']",
-        "created": "2019-07-30T16:18:44.374Z",
-        "user": 4
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 5,
-    "fields": {
-        "content": "['Try ten production many once memory service.', 'Lead pressure so situation drug human recognize bed.', 'Represent boy financial until.']",
-        "created": "2019-07-30T16:18:44.458Z",
-        "user": 5
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 6,
-    "fields": {
-        "content": "['Debate end anyone easy side simple and.', 'Treat sing book although very power agency office.', 'Phone gun center really form.']",
-        "created": "2019-07-30T16:18:44.541Z",
-        "user": 6
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 7,
-    "fields": {
-        "content": "['Already out under fear.', 'Per face citizen available early.', 'Bag her result.']",
-        "created": "2019-07-30T16:18:44.624Z",
-        "user": 7
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 8,
-    "fields": {
-        "content": "['Yeah end cause.', 'Respond staff continue measure cost data million.', 'House box need arm.']",
-        "created": "2019-07-30T16:18:44.700Z",
-        "user": 8
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 9,
-    "fields": {
-        "content": "['Read person writer build keep computer.', 'Poor another mother until.', 'Meeting after hour south two fight feel.']",
-        "created": "2019-07-30T16:18:44.775Z",
-        "user": 9
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 10,
-    "fields": {
-        "content": "['Political leg hold inside only science.', 'Four movie control use himself thought.', 'Prepare yet according work finish authority.']",
-        "created": "2019-07-30T16:18:44.858Z",
-        "user": 10
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 11,
-    "fields": {
-        "content": "['Up human low force.', 'Once threat scene right.', 'Sea author difference stop.']",
-        "created": "2019-07-30T16:18:44.942Z",
-        "user": 11
-    }
-},
-{
-    "model": "tweet.tweet",
+    "model": "users.myuser",
     "pk": 12,
     "fields": {
-        "content": "Expert nation bit per well build return.', 'Put level weight environment.', 'Power trouble message full black.']",
-        "created": "2019-07-30T16:19:11.867Z",
-        "user": 6
+        "password": "pbkdf2_sha256$150000$JxxfugRfAj5S$0oGAbzOg8F/xVBG5/6cB+bFh+5CoourrNnqI/ypQoaA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tester15",
+        "first_name": "Tes",
+        "last_name": "Ter",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-08-07T20:14:13.070Z",
+        "email": "tester5@t.pl",
+        "groups": [],
+        "user_permissions": []
     }
 },
 {
-    "model": "tweet.tweet",
+    "model": "users.myuser",
     "pk": 13,
     "fields": {
-        "content": "['Interest capital despite.', 'Develop successful wait star treat live me should.', 'Suddenly else cut of he use.']",
-        "created": "2019-07-30T16:19:11.955Z",
-        "user": 10
+        "password": "pbkdf2_sha256$150000$eLqJCt0IxQlD$dC4GQo/oeCvLUb+NR86lwf7D1KPg5YMB7dTxW/P7iRs=",
+        "last_login": "2019-08-07T20:15:02.614Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-08-07T20:14:43.694Z",
+        "email": "asd@a.wpl",
+        "groups": [],
+        "user_permissions": []
     }
 },
 {
-    "model": "tweet.tweet",
-    "pk": 14,
-    "fields": {
-        "content": "['Agree possible visit exactly whole face commercial.', 'Ability economic minute deal left power.', 'Government modern sit whatever citizen find start.']",
-        "created": "2019-07-30T16:19:12.059Z",
-        "user": 1
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 15,
-    "fields": {
-        "content": "['Attack article wide capital go.', 'Hard mother feel message fly difference view.', 'Decade democratic fund day foot school raise ahead.']",
-        "created": "2019-07-30T16:19:12.132Z",
-        "user": 9
-    }
-},
-{
-    "model": "tweet.tweet",
+    "model": "users.myuser",
     "pk": 16,
     "fields": {
-        "content": "['Amount eight common world talk try century begin.', 'Successful model hold think trial trouble.', 'Factor city pass conference senior increase area.']",
-        "created": "2019-07-30T16:19:12.197Z",
-        "user": 8
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 17,
-    "fields": {
-        "content": "['Inside they painting then democratic eight decide.', 'Know president natural spring agent sure.', 'Reduce ground do after computer look ahead.']",
-        "created": "2019-07-30T16:19:12.283Z",
-        "user": 9
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 18,
-    "fields": {
-        "content": "['Lose create term decision player ball avoid.', 'Control cost now now technology.', 'Build natural number institution somebody.']",
-        "created": "2019-07-30T16:19:12.375Z",
-        "user": 9
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 19,
-    "fields": {
-        "content": "['Return center back worry four area.', 'Adult find per also economic guy attention.', 'Including spend activity trade close girl.']",
-        "created": "2019-07-30T16:19:12.450Z",
-        "user": 9
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 20,
-    "fields": {
-        "content": "['Trip seem adult machine administration strategy type effect.', 'Group most at less what poor that.', 'A conference bag keep center.']",
-        "created": "2019-07-30T16:19:12.524Z",
-        "user": 4
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 21,
-    "fields": {
-        "content": "['Activity least economy huge.', 'International position drive country marriage fine month water.', 'Miss pick century nor involve shoulder.']",
-        "created": "2019-07-30T16:19:12.599Z",
-        "user": 4
-    }
-},
-{
-    "model": "tweet.tweet",
-    "pk": 23,
-    "fields": {
-        "content": "ELORLEORELODADFAOEOREAR",
-        "created": "2019-07-31T11:32:24.275Z",
-        "user": 6
+        "password": "pbkdf2_sha256$150000$zPZtR3VntT63$Pl7Bl82HsvCcAncbGgMb/mNVjTpSUslv145FRbaRgzY=",
+        "last_login": "2019-08-12T17:33:35.343Z",
+        "is_superuser": false,
+        "username": "Aron",
+        "first_name": "asdf",
+        "last_name": "asdfasdf",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-08-12T17:33:29.952Z",
+        "email": "testsdasdfer5@t.pl",
+        "groups": [],
+        "user_permissions": []
     }
 }
 ]
