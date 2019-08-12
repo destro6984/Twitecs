@@ -690,16 +690,6 @@
 
 {
     "model": "users.profileuser",
-    "pk": 1,
-    "fields": {
-        "user": 1,
-        "image_from_cl": "image/upload/v1565600435/non_existing_id.png",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
     "pk": 2,
     "fields": {
         "user": 2,
