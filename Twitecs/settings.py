@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'tweet.apps.TweetConfig',
     'users.apps.UsersConfig',
+    'cloudinary',
 
 
 
