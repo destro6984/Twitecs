@@ -1,7 +1,9 @@
+from cloudinary.forms import CloudinaryFileField
 from django.contrib.auth.models import User
 from django.forms import ModelForm
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.utils import timezone
 
 from users.models import MyUser, ProfileUser
 
@@ -19,6 +21,8 @@ class UpdateProfileUser(ModelForm):
     class Meta:
         model = ProfileUser
         exclude = ('user',)
+    image_from_cl = CloudinaryFileField(
+        options={'width': 150, 'height': 150, 'radius': 20, 'crop': "fit", 'public_id': str(timezone.now())})
 
 class UpdateUser(ModelForm):
     class Meta:

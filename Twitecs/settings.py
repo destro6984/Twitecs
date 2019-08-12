@@ -12,6 +12,14 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import django_heroku
+import cloudinary
+
+
+cloudinary.config(
+  cloud_name = os.environ.get("CLOUDINARY_CLOUD_NAME"),
+  api_key = os.environ.get("CLOUDINARY_API_KEY"),
+  api_secret = os.environ.get("CLOUDINARY_API_SECRET"),
+)
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -34,8 +42,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
-
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +51,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'tweet.apps.TweetConfig',
     'users.apps.UsersConfig',
+    'cloudinary',
 
 
 

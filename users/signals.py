@@ -7,7 +7,7 @@ from django.dispatch import receiver
 @receiver(post_save, sender=MyUser)
 def create_profile(sender, instance, created, **kwargs):
     if created:
-        ProfileUser.objects.create(user=instance)
+        ProfileUser.objects.create(user=instance,image_from_cl="image/upload/c_fit,h_150,r_20,w_150/v1565600435/non_existing_id.png")
 
 
 # zapisze profil
