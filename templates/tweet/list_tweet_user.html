@@ -1,6 +1,7 @@
 {% extends "tweet/base.html" %}
 {% load crispy_forms_tags %}
 {% load static %}
+{% load cloudinary %}
 {% block content %}
     <div class="container">
         {% if user.is_authenticated %}
@@ -18,7 +19,7 @@
         {% for tweet in tweets %}
 
             <article class="media content-section border rounded tweetlist">
-                <img class="rounded-circle article-img" src="{{ tweet.user.profileuser.image.url }}">
+                <div class="mr-2">{% cloudinary tweet.user.profileuser.image_from_cl %}</div>
                 <div class="media-body">
                     <div class="article-metadata">
                         <a class="mr-2" href="3">{{ tweet.user }}</a>
