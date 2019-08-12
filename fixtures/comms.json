@@ -63,7 +63,7 @@
     "model": "tweet.comments",
     "pk": 7,
     "fields": {
-        "text_content": "['Everybody door traditional how kid brother behind executive.']",
+        "text_content": "['Everybody door traditional how kid brother behind",
         "tweet": 2,
         "author": 4,
         "created_comment": "2019-08-01T13:44:28.121Z"
@@ -103,7 +103,7 @@
     "model": "tweet.comments",
     "pk": 11,
     "fields": {
-        "text_content": "['Stand gun which far whether think for notice.']",
+        "text_content": "['Stand gun which far whether think for]",
         "tweet": 4,
         "author": 10,
         "created_comment": "2019-08-01T13:44:28.397Z"
