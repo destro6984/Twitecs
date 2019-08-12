@@ -1,0 +1,142 @@
+[
+{
+    "model": "users.profileuser",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "image_from_cl": "image/upload/v1565600435/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 4,
+    "fields": {
+        "user": 4,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 5,
+    "fields": {
+        "user": 5,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 6,
+    "fields": {
+        "user": 6,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": "1940-01-01"
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 7,
+    "fields": {
+        "user": 7,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 8,
+    "fields": {
+        "user": 8,
+        "image_from_cl": "image/upload/v1565629661/2019-08-12 17:03:59.102389+00:00.jpg",
+        "location": "",
+        "birth_date": "1940-01-01"
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 9,
+    "fields": {
+        "user": 9,
+        "image_from_cl": "image/upload/v1565629171/2019-08-12 16:59:24.637835+00:00.jpg",
+        "location": "Lodz",
+        "birth_date": "1955-12-16"
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 10,
+    "fields": {
+        "user": 10,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 11,
+    "fields": {
+        "user": 11,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 12,
+    "fields": {
+        "user": 12,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 13,
+    "fields": {
+        "user": 13,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 16,
+    "fields": {
+        "user": 16,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+}
+]

@@ -1,0 +1,128 @@
+[
+{
+    "model": "tweet.tweet",
+    "pk": 1,
+    "fields": {
+        "content": "['Grow build brother phone.', 'Reason college he type capital.', 'Nor will effect decade.']",
+        "created": "2019-08-01T13:36:56.355Z",
+        "user": 10
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 2,
+    "fields": {
+        "content": "['Her new fight age camera professor.', 'Kitchen address coach ok wish although.', 'Role low both health and story.']",
+        "created": "2019-08-01T13:36:56.430Z",
+        "user": 8
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 3,
+    "fields": {
+        "content": "['What government age later hold suddenly.', 'Then buy character his serve return kid.', 'Maybe when student finally only though.']",
+        "created": "2019-08-01T13:36:56.505Z",
+        "user": 5
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 4,
+    "fields": {
+        "content": "['Serve give price leg.', 'Lose I approach drop air.', 'Reason same sea arrive subject respond agreement.']",
+        "created": "2019-08-01T13:36:56.580Z",
+        "user": 6
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 5,
+    "fields": {
+        "content": "['Building lay shake suggest meeting hot.', 'Beat become energy thus organization data my.', 'Remain feel back both may some cell.']",
+        "created": "2019-08-01T13:36:56.680Z",
+        "user": 6
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 6,
+    "fields": {
+        "content": "['Likely not approach.', 'Word without reduce suffer true huge fund.', 'Must mother bag likely quite special.']",
+        "created": "2019-08-01T13:36:56.772Z",
+        "user": 2
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 7,
+    "fields": {
+        "content": "['Hospital top five PM bill trip.', 'Nearly attorney work close thank.', 'Week action yet partner large recently.']",
+        "created": "2019-08-01T13:36:56.847Z",
+        "user": 9
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 8,
+    "fields": {
+        "content": "['Green it summer.', 'Meeting action of.', 'Character cell pattern short.']",
+        "created": "2019-08-01T13:36:56.922Z",
+        "user": 10
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 9,
+    "fields": {
+        "content": "['Film rate process single item former.', 'Sign represent tend seven news control.', 'Computer treat safe environmental myself.']",
+        "created": "2019-08-01T13:36:56.997Z",
+        "user": 2
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 10,
+    "fields": {
+        "content": "['Care they kind ready.', 'Somebody draw movie avoid throughout record.', 'By make research cell series choice world.']",
+        "created": "2019-08-01T13:36:57.072Z",
+        "user": 6
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 11,
+    "fields": {
+        "content": "['Together instead write kitchen nature black.', 'Low change can woman significant.', 'No computer full simply result three region.']",
+        "created": "2019-08-01T13:36:57.147Z",
+        "user": 8
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 23,
+    "fields": {
+        "content": "m v",
+        "created": "2019-08-06T12:26:08.583Z",
+        "user": 9
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 24,
+    "fields": {
+        "content": "45564564",
+        "created": "2019-08-06T12:42:19.787Z",
+        "user": 6
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 25,
+    "fields": {
+        "content": "NEw in th city",
+        "created": "2019-08-12T17:34:37.252Z",
+        "user": 16
+    }
+}
+]
