@@ -89,6 +89,22 @@
 },
 {
     "model": "sessions.session",
+    "pk": "h542gsk4dur1290trg36cuokqzskn722",
+    "fields": {
+        "session_data": "NjJiZTY2ZTUyOGNmMjQxOGM3NTQxNWQzYWM5MjdmY2MzZTE2YzllOTp7Il9hdXRoX3VzZXJfaWQiOiIxNiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYzJmMzJkZGUyMDllOTY0ZjE2YWYzZDk2ZDQzYzgxYjA4NDkyNjNjNSJ9",
+        "expire_date": "2019-08-26T17:33:35.477Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "pbpbuzlr2p7cs3mkvokg4cxjbye77i0h",
+    "fields": {
+        "session_data": "MDJmMGNjMjA5Y2EzMmM2Yjk1MWJmNjIyMWJlOTM0OGFjZTllMWQ3Nzp7Il9hdXRoX3VzZXJfaWQiOiIxMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiOTc3N2Y1OTk3MWU1OTUzOWE2MzczYWY3ZjJhZGMxODJhMTE3OWNhZiJ9",
+        "expire_date": "2019-08-21T20:15:02.760Z"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "zs8afielraol7bhckh05zzscu0f7krvr",
     "fields": {
         "session_data": "NDA5MTFlZTE1NzZiMGE1M2RkMDk0YmZhYmM2ZDdkZDE4NTk4YzQ1MTp7Il9hdXRoX3VzZXJfaWQiOiIxMCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYjg2NTVhMWVjYTFmOTMyZDYxYWJkOTFmYjRjZjAzN2VmY2FhYjE2OCJ9",
@@ -586,7 +602,7 @@
     "pk": 8,
     "fields": {
         "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": null,
+        "last_login": "2019-08-12T17:07:31.810Z",
         "is_superuser": false,
         "username": "caitlyndavis",
         "first_name": "Donald",
@@ -604,7 +620,7 @@
     "pk": 9,
     "fields": {
         "password": "pbkdf2_sha256$150000$uvJgfxW5GDDC$BeePu9ZyY9+YEhvXGTnY5FUS+W1j7G7ZGgcT2CVae1Y=",
-        "last_login": "2019-08-06T11:30:16.804Z",
+        "last_login": "2019-08-12T16:57:30.860Z",
         "is_superuser": false,
         "username": "hornmichael",
         "first_name": "Alec",
@@ -654,11 +670,65 @@
     }
 },
 {
+    "model": "users.myuser",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$JxxfugRfAj5S$0oGAbzOg8F/xVBG5/6cB+bFh+5CoourrNnqI/ypQoaA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tester15",
+        "first_name": "Tes",
+        "last_name": "Ter",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-08-07T20:14:13.070Z",
+        "email": "tester5@t.pl",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$eLqJCt0IxQlD$dC4GQo/oeCvLUb+NR86lwf7D1KPg5YMB7dTxW/P7iRs=",
+        "last_login": "2019-08-07T20:15:02.614Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-08-07T20:14:43.694Z",
+        "email": "asd@a.wpl",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.myuser",
+    "pk": 16,
+    "fields": {
+        "password": "pbkdf2_sha256$150000$zPZtR3VntT63$Pl7Bl82HsvCcAncbGgMb/mNVjTpSUslv145FRbaRgzY=",
+        "last_login": "2019-08-12T17:33:35.343Z",
+        "is_superuser": false,
+        "username": "Aron",
+        "first_name": "asdf",
+        "last_name": "asdfasdf",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2019-08-12T17:33:29.952Z",
+        "email": "testsdasdfer5@t.pl",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
     "model": "users.profileuser",
     "pk": 1,
     "fields": {
         "user": 1,
-        "image": "default.jpg",
+        "image_from_cl": "image/upload/v1565600435/non_existing_id.png",
         "location": "",
         "birth_date": null
     }
@@ -668,7 +738,7 @@
     "pk": 2,
     "fields": {
         "user": 2,
-        "image": "default.jpg",
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
         "location": "",
         "birth_date": null
     }
@@ -678,7 +748,7 @@
     "pk": 3,
     "fields": {
         "user": 3,
-        "image": "default.jpg",
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
         "location": "",
         "birth_date": null
     }
@@ -688,7 +758,7 @@
     "pk": 4,
     "fields": {
         "user": 4,
-        "image": "default.jpg",
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
         "location": "",
         "birth_date": null
     }
@@ -698,7 +768,7 @@
     "pk": 5,
     "fields": {
         "user": 5,
-        "image": "default.jpg",
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
         "location": "",
         "birth_date": null
     }
@@ -708,7 +778,7 @@
     "pk": 6,
     "fields": {
         "user": 6,
-        "image": "profiles/zdd.jpeg",
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
         "location": "",
         "birth_date": "1940-01-01"
     }
@@ -718,7 +788,7 @@
     "pk": 7,
     "fields": {
         "user": 7,
-        "image": "default.jpg",
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
         "location": "",
         "birth_date": null
     }
@@ -728,9 +798,9 @@
     "pk": 8,
     "fields": {
         "user": 8,
-        "image": "default.jpg",
+        "image_from_cl": "image/upload/v1565629661/2019-08-12 17:03:59.102389+00:00.jpg",
         "location": "",
-        "birth_date": null
+        "birth_date": "1940-01-01"
     }
 },
 {
@@ -738,7 +808,7 @@
     "pk": 9,
     "fields": {
         "user": 9,
-        "image": "profiles/image_jNjh4zt.png",
+        "image_from_cl": "image/upload/v1565629171/2019-08-12 16:59:24.637835+00:00.jpg",
         "location": "Lodz",
         "birth_date": "1955-12-16"
     }
@@ -748,7 +818,7 @@
     "pk": 10,
     "fields": {
         "user": 10,
-        "image": "default.jpg",
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
         "location": "",
         "birth_date": null
     }
@@ -758,7 +828,37 @@
     "pk": 11,
     "fields": {
         "user": 11,
-        "image": "default.jpg",
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 12,
+    "fields": {
+        "user": 12,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 13,
+    "fields": {
+        "user": 13,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
+        "location": "",
+        "birth_date": null
+    }
+},
+{
+    "model": "users.profileuser",
+    "pk": 16,
+    "fields": {
+        "user": 16,
+        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
         "location": "",
         "birth_date": null
     }
@@ -770,7 +870,7 @@
         "message": "cz x",
         "from_user": 9,
         "to_user": 8,
-        "is_read": false,
+        "is_read": true,
         "send_time": "2019-08-01T13:56:36.220Z"
     }
 },
@@ -915,6 +1015,28 @@
         "to_user": 6,
         "is_read": true,
         "send_time": "2019-08-06T12:40:10.626Z"
+    }
+},
+{
+    "model": "tweet.messages",
+    "pk": 15,
+    "fields": {
+        "message": "Hello",
+        "from_user": 16,
+        "to_user": 6,
+        "is_read": false,
+        "send_time": "2019-08-12T17:34:22.428Z"
+    }
+},
+{
+    "model": "tweet.messages",
+    "pk": 16,
+    "fields": {
+        "message": "Hello",
+        "from_user": 16,
+        "to_user": 16,
+        "is_read": true,
+        "send_time": "2019-08-12T17:34:42.272Z"
     }
 },
 {
@@ -1178,6 +1300,16 @@
     }
 },
 {
+    "model": "tweet.comments",
+    "pk": 28,
+    "fields": {
+        "text_content": "Huraaaa",
+        "tweet": 11,
+        "author": 16,
+        "created_comment": "2019-08-12T17:33:50.920Z"
+    }
+},
+{
     "model": "tweet.tweet",
     "pk": 1,
     "fields": {
@@ -1292,6 +1424,15 @@
         "content": "45564564",
         "created": "2019-08-06T12:42:19.787Z",
         "user": 6
+    }
+},
+{
+    "model": "tweet.tweet",
+    "pk": 25,
+    "fields": {
+        "content": "NEw in th city",
+        "created": "2019-08-12T17:34:37.252Z",
+        "user": 16
     }
 }
 ]
