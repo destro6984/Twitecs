@@ -687,42 +687,7 @@
         "user_permissions": []
     }
 },
-{
-    "model": "users.myuser",
-    "pk": 13,
-    "fields": {
-        "password": "pbkdf2_sha256$150000$eLqJCt0IxQlD$dC4GQo/oeCvLUb+NR86lwf7D1KPg5YMB7dTxW/P7iRs=",
-        "last_login": "2019-08-07T20:15:02.614Z",
-        "is_superuser": true,
-        "username": "admin",
-        "first_name": "",
-        "last_name": "",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2019-08-07T20:14:43.694Z",
-        "email": "asd@a.wpl",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "users.myuser",
-    "pk": 16,
-    "fields": {
-        "password": "pbkdf2_sha256$150000$zPZtR3VntT63$Pl7Bl82HsvCcAncbGgMb/mNVjTpSUslv145FRbaRgzY=",
-        "last_login": "2019-08-12T17:33:35.343Z",
-        "is_superuser": false,
-        "username": "Aron",
-        "first_name": "asdf",
-        "last_name": "asdfasdf",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2019-08-12T17:33:29.952Z",
-        "email": "testsdasdfer5@t.pl",
-        "groups": [],
-        "user_permissions": []
-    }
-},
+
 {
     "model": "users.profileuser",
     "pk": 1,
@@ -848,16 +813,6 @@
     "pk": 13,
     "fields": {
         "user": 13,
-        "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
-        "location": "",
-        "birth_date": null
-    }
-},
-{
-    "model": "users.profileuser",
-    "pk": 16,
-    "fields": {
-        "user": 16,
         "image_from_cl": "image/upload/v1565630684/non_existing_id.png",
         "location": "",
         "birth_date": null
