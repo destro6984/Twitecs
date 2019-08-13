@@ -9,9 +9,6 @@
 
         {% endblock %}
         {% if user.is_authenticated %}
-
-
-
             <form method="post"><!-- form to add tweet -->
                 {% csrf_token %}
                 <label>You would write a tweet: </label>

@@ -16,33 +16,35 @@
 
         <div class="row">
             <div class="col-6" id="new">
-                {% for messages in object_list %}
-
-                    <ul>
+                <ul>
+                    {% for messages in object_list %}
                         {% if not messages.is_read %}
-                            <li style="list-style: none; border-style: solid; border-color: greenyellow">
+                            <li class="my-1" style="list-style: none; border-style: groove ; border-color: greenyellow;" id="messnew">
+                            {% else %}
+                            <li class="my-1" style="list-style: none; border-style: groove ; border-color: black;" id="messnew">
                         {% endif %}
-                        <article class="media content-section border rounded">
+                    <article class="media content-section border rounded">
 
-                            <div class="media-body">
-                                <div style=" display:inline;">{% cloudinary messages.from_user.profileuser.image_from_cl.url height=60 wight=60 %}</div>
-                                <div class="article-metadata" style=" display:inline;">
-                                    <a class="mr-2" href="#">{{ messages.from_user }}</a>
-                                    <small class="text-muted">{{ messages.send_time|date:'d, F Y, H:i' }}</small>
-                                </div>
-                                <form method="GET" style=" display:inline; float: right;">
-                                    {% csrf_token %}
-                                    <input type="submit" class="btn showmessage" value="Read"
-                                           name="{% url 'message' pk=messages.id %}" id={{ messages.id }}>
-                                </form>
-                                <p class="article-content"
-                                   style="max-width: 700px; word-wrap: break-word">{{ messages.message }}</p>
-
+                        <div class="media-body">
+                            <div style=" display:inline;">{% cloudinary messages.from_user.profileuser.image_from_cl.url height=60 wight=60 %}</div>
+                            <div class="article-metadata" style=" display:inline;">
+                                <a class="mr-2" href="#">{{ messages.from_user }}</a>
+                                <small class="text-muted">{{ messages.send_time|date:'d, F Y, H:i' }}</small>
                             </div>
-                        </article>
-                        </li>
-                    </ul>
-                {% endfor %}
+                            <form method="GET" style=" display:inline; float: right;">
+                                {% csrf_token %}
+                                <input type="submit" class="btn showmessage" value="Read"
+                                       name="{% url 'message' pk=messages.id %}" id={{ messages.id }}>
+                            </form>
+                            <p class="article-content"
+                               style="max-width: 52%; word-wrap: break-word">{{ messages.message }}</p>
+
+                        </div>
+                    </article>
+                    </li>
+
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>

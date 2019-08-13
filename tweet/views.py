@@ -59,7 +59,7 @@ class TweetDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 
 
-class UserTweetListView(FormMixin,ListView):
+class UserTweetListView(FormMixin,LoginRequiredMixin,ListView):
     model = Tweet
     context_object_name = "tweets"
     template_name = 'tweet/list_tweet_user.html'
@@ -84,7 +84,7 @@ class UserTweetListView(FormMixin,ListView):
             messages.success(request, "Error")
             return self.form_invalid(form)
 
-class TweetDetailView(FormMixin, DetailView):
+class TweetDetailView(FormMixin, LoginRequiredMixin, DetailView):
     model = Tweet
     template_name = 'tweet/tweet_detail.html'
     form_class = CommAddForm

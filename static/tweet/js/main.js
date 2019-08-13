@@ -1,6 +1,6 @@
 $(function () {
 
-// clicko on tweet -redirect to tweet deatil
+// click on tweet -redirect to tweet deatil
     $(".tweetlist").click(function () {
         var url = $(this).find('#tweetdetial').attr('href');
         console.log(url);
@@ -14,9 +14,11 @@ $(function () {
         var url = $(this).attr('name');
         window.open(url, "", 'width=700,height=200');
 
+        $('#messnew').css('border-color','black');
+
 
         var url_to_change_isread = '/change_status/';
-        pk=$(this).attr('id');
+        pk = $(this).attr('id');
         $.ajax({
             type: "GET",
             url: url_to_change_isread,
@@ -29,13 +31,22 @@ $(function () {
         });
     });
 // open popup window to add new message
-$('#newtweet').click(function(e) {
-	$('.bg-modal').css('display', 'flex')
-});
+    $('#newtweet').click(function (e) {
+        $('.bg-modal').css('display', 'flex')
+    });
 
-$('.close').click( function() {
-	$('.bg-modal').css('display','none')
-});
+    $('.close').click(function () {
+        $('.bg-modal').css('display', 'none')
+    });
+// shining messages
+    if (($('#messagesbutton span').attr('id') == 'True')) {
+        setInterval(function () {
+            if ($('#messagesbutton span').attr('class') == 'bt-one') {
+                $('#messagesbutton span').toggleClass('bt-one', 'bt-two');
+            } else {
+                $('#messagesbutton span').toggleClass('bt-two', 'bt-one');
+            }
 
-
+        }, 700);
+    }
 });

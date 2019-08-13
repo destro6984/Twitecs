@@ -38,9 +38,17 @@ body {
 }
 /*end */
 
-
 .rounded-circle {
     width: 130px;
 	height: 100%;
 
 }
+
+/*shining message button*/
+.bt-one{
+	color:black;
+}
+.bt-two{
+	color: lightgoldenrodyellow;
+}
+/*end shinig buttons*/
