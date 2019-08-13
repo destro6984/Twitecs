@@ -156,4 +156,6 @@ MEDIA_ROOT= os.path.join(BASE_DIR, "media")
 
 MEDIA_URL= "/media/"
 
+# close session at clos page
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 

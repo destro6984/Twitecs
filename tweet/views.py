@@ -127,7 +127,7 @@ class MessagesView(LoginRequiredMixin,UserPassesTestMixin,ListView):
 
     def get_queryset(self):
         user = get_object_or_404(MyUser, id=self.kwargs.get('pk'))
-        return Messages.objects.filter(to_user=user)
+        return Messages.objects.filter(to_user=user).order_by('-send_time')
     def test_func(self):
         user = get_object_or_404(MyUser, id=self.kwargs.get('pk'))
         return self.request.user == user
