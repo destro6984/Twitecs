@@ -24,7 +24,6 @@
                             <li class="my-1" style="list-style: none; border-style: groove ; border-color: black;" id="messnew">
                         {% endif %}
                     <article class="media content-section border rounded">
-
                         <div class="media-body">
                             <div style=" display:inline;">{% cloudinary messages.from_user.profileuser.image_from_cl.url height=60 wight=60 %}</div>
                             <div class="article-metadata" style=" display:inline;">
@@ -36,7 +35,7 @@
                                 <input type="submit" class="btn showmessage" value="Read"
                                        name="{% url 'message' pk=messages.id %}" id={{ messages.id }}>
                             </form>
-                            <p class="article-content"
+                            <p class="article-content" id="textmessage"
                                style="max-width: 52%; word-wrap: break-word">{{ messages.message }}</p>
 
                         </div>

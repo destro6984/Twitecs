@@ -14,7 +14,7 @@ $(function () {
         var url = $(this).attr('name');
         window.open(url, "", 'width=700,height=200');
 
-        $('#messnew').css('border-color','black');
+        $('#messnew').css('border-color', 'black');
 
 
         var url_to_change_isread = '/change_status/';
@@ -49,4 +49,13 @@ $(function () {
 
         }, 700);
     }
+// display firest 30 chars in message
+    $('#textmessage').each(function () {
+        var shorttext=$(this).text().substr(1,50);
+        $(this).text(shorttext);
+
+
+    })
+
+
 });

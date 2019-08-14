@@ -149,3 +149,5 @@ def change_status_to_read(request,pk):
         return JsonResponse({"success": True})
     except Exception as e:
         return JsonResponse({"success": False})
+
+
